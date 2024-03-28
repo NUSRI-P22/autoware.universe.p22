@@ -11,6 +11,8 @@
   <buildtool_depend>autoware_cmake</buildtool_depend>
 
   <exec_depend>vehicle_info_util</exec_depend>
+  <exec_depend>p22_sensor_kit_launch</exec_depend>
+  <exec_depend>p22_sensor_kit_description</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>autoware_lint_common</test_depend>
