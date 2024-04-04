@@ -14,8 +14,8 @@
   <arg name="pose_initializer_param_path"/>
   <arg name="eagleye_param_path"/>
 
-  <arg name="input_pointcloud" default="/sensing/lidar/top/pointcloud"/>
-  <arg name="lidar_container_name" default="/sensing/lidar/top/pointcloud_preprocessor/pointcloud_container"/>
+  <arg name="input_pointcloud" default="/unilidar/cloud"/>
+  <arg name="lidar_container_name" default="/sensing/lidar/unitree/pointcloud_preprocessor/pointcloud_container"/>
 
   <!-- localization module -->
   <group>

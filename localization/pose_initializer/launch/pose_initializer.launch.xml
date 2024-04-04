@@ -3,7 +3,6 @@
   <arg name="ndt_enabled"/>
   <arg name="gnss_enabled"/>
   <arg name="ekf_enabled"/>
-  <arg name="yabloc_enabled"/>
   <arg name="stop_check_enabled"/>
 
   <arg name="sub_gnss_pose_cov" default="sub_gnss_pose_cov"/>
@@ -13,10 +12,8 @@
     <param name="ndt_enabled" value="$(var ndt_enabled)"/>
     <param name="gnss_enabled" value="$(var gnss_enabled)"/>
     <param name="ekf_enabled" value="$(var ekf_enabled)"/>
-    <param name="yabloc_enabled" value="$(var yabloc_enabled)"/>
     <param name="stop_check_enabled" value="$(var stop_check_enabled)"/>
 
-    <remap from="yabloc_align" to="/localization/pose_estimator/yabloc/initializer/yabloc_align_srv"/>
     <remap from="ndt_align" to="/localization/pose_estimator/ndt_align_srv"/>
     <remap from="stop_check_twist" to="/sensing/vehicle_velocity_converter/twist_with_covariance"/>
     <remap from="gnss_pose_cov" to="$(var sub_gnss_pose_cov)"/>
