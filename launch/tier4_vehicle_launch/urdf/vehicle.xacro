@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot name="vehicle" xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:arg name="vehicle_model" default=""/>
-  <xacro:arg name="sensor_model" default=""/>
+  <xacro:arg name="vehicle_model" default="p22_vehicle"/>
+  <xacro:arg name="sensor_model" default="p22_sensor_kit"/>
 
   <!-- vehicle -->
   <xacro:property name="vehicle_model_property" value="$(arg vehicle_model)"/>

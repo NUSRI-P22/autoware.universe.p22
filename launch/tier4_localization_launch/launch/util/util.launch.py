@@ -108,7 +108,7 @@ def generate_launch_description():
     add_launch_arg("use_intra_process", "true", "use ROS 2 component container communication")
     add_launch_arg(
         "lidar_container_name",
-        "/sensing/lidar/top/pointcloud_preprocessor/pointcloud_container",
+        "/sensing/lidar/unitree/pointcloud_preprocessor/pointcloud_container",
         "container name of main lidar used for localization",
     )
 
