@@ -34,12 +34,8 @@ import yaml
 
 
 def launch_setup(context, *args, **kwargs):
-    lanelet2_map_loader_param_path = LaunchConfiguration("lanelet2_map_loader_param_path").perform(
-        context
-    )
-    pointcloud_map_loader_param_path = LaunchConfiguration(
-        "pointcloud_map_loader_param_path"
-    ).perform(context)
+    lanelet2_map_loader_param_path = LaunchConfiguration("lanelet2_map_loader_param_path").perform(context)
+    pointcloud_map_loader_param_path = LaunchConfiguration("pointcloud_map_loader_param_path").perform(context)
 
     with open(lanelet2_map_loader_param_path, "r") as f:
         lanelet2_map_loader_param = yaml.safe_load(f)["/**"]["ros__parameters"]
@@ -195,7 +191,10 @@ def generate_launch_description():
     ),
     add_launch_arg(
         "pointcloud_map_loader_param_path",
-        None,
+        [
+            FindPackageShare("map_loader"),
+            "/config/pointcloud_map_loader.param.yaml",
+        ],
         "path to pointcloud_map_loader param file",
     ),
     add_launch_arg("use_intra_process", "false", "use ROS 2 component container communication"),

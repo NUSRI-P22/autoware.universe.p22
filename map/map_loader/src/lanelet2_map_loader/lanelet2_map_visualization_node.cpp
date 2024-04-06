@@ -97,7 +97,8 @@ void Lanelet2MapVisualizationNode::onMapBin(
     lanelet::utils::query::crosswalkLanelets(all_lanelets);
   lanelet::ConstLineStrings3d partitions = lanelet::utils::query::getAllPartitions(viz_lanelet_map);
   lanelet::ConstLineStrings3d pedestrian_markings =
-    lanelet::utils::query::getAllPedestrianMarkings(viz_lanelet_map);
+    // lanelet::utils::query::getAllPedestrianMarkings(viz_lanelet_map);
+    lanelet::utils::query::getAllPedestrianLineMarkings(viz_lanelet_map);
   lanelet::ConstLanelets walkway_lanelets = lanelet::utils::query::walkwayLanelets(all_lanelets);
   std::vector<lanelet::ConstLineString3d> stop_lines =
     lanelet::utils::query::stopLinesLanelets(road_lanelets);
@@ -179,7 +180,8 @@ void Lanelet2MapVisualizationNode::onMapBin(
     &map_marker_array, lanelet::visualization::laneletsAsTriangleMarkerArray(
                          "crosswalk_lanelets", crosswalk_lanelets, cl_cross));
   insertMarkerArray(
-    &map_marker_array, lanelet::visualization::pedestrianMarkingsAsMarkerArray(
+    // &map_marker_array, lanelet::visualization::pedestrianMarkingsAsMarkerArray(
+    &map_marker_array, lanelet::visualization::pedestrianLineMarkingsAsMarkerArray(
                          pedestrian_markings, cl_pedestrian_markings));
   insertMarkerArray(
     &map_marker_array, lanelet::visualization::laneletsAsTriangleMarkerArray(

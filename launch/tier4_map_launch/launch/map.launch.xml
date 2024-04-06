@@ -1,11 +1,11 @@
 <launch>
   <!-- Parameter files -->
-  <arg name="pointcloud_map_loader_param_path"/>
-  <arg name="lanelet2_map_loader_param_path"/>
+  <arg name="pointcloud_map_loader_param_path" default="$(find-pkg-share map_loader)/config/pointcloud_map_loader.param.yaml"/>
+  <arg name="lanelet2_map_loader_param_path" default="$(find-pkg-share map_loader)/config/lanelet2_map_loader.param.yaml"/>
 
   <arg name="map_path" default=""/>
-  <arg name="lanelet2_map_path" default="$(var map_path)/lanelet2_map.osm"/>
-  <arg name="pointcloud_map_path" default="$(var map_path)/pointcloud_map.pcd"/>
+  <arg name="lanelet2_map_path" default="/home/raymon/autoware_map/NUS_map/NUS_lanelet2_maps.osm"/>
+  <arg name="pointcloud_map_path" default="/home/raymon/autoware_map/NUS_map/NUSRI_1L_positive_xy.pcd"/>
 
   <group>
     <push-ros-namespace namespace="map"/>
