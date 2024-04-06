@@ -1,9 +1,9 @@
 <launch>
   <arg name="lanelet2_map_loader_param_path" default="$(find-pkg-share map_loader)/config/lanelet2_map_loader.param.yaml"/>
-  <arg name="lanelet2_map_path" default="/home/raymon/autoware_map/NUS_map/NUS_lanelet2_maps.osm"/>
+  <arg name="lanelet2_map_path" default="~/autoware_map/NUS_map/NUS_lanelet2_maps.osm"/>
   <arg name="lanelet2_map_topic" default="vector_map"/>
   <arg name="lanelet2_map_marker_topic" default="vector_map_marker"/>
-  <arg name="pointcloud_map_path" default="/home/raymon/autoware_map/NUS_map/NUSRI_1L_positive_xy.pcd"/>
+  <arg name="pointcloud_map_path" default="~/autoware_map/NUS_map/NUSRI_1L_positive_xy.pcd"/>
 
   <node pkg="map_loader" exec="map_hash_generator" name="map_hash_generator">
     <param name="lanelet2_map_path" value="$(var lanelet2_map_path)"/>

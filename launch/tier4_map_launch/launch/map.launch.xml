@@ -4,8 +4,8 @@
   <arg name="lanelet2_map_loader_param_path" default="$(find-pkg-share map_loader)/config/lanelet2_map_loader.param.yaml"/>
 
   <arg name="map_path" default=""/>
-  <arg name="lanelet2_map_path" default="/home/raymon/autoware_map/NUS_map/NUS_lanelet2_maps.osm"/>
-  <arg name="pointcloud_map_path" default="/home/raymon/autoware_map/NUS_map/NUSRI_1L_positive_xy.pcd"/>
+  <arg name="lanelet2_map_path" default="~/autoware_map/NUS_map/NUS_lanelet2_maps.osm"/>
+  <arg name="pointcloud_map_path" default="~/autoware_map/NUS_map/NUSRI_1L_positive_xy.pcd"/>
 
   <group>
     <push-ros-namespace namespace="map"/>
